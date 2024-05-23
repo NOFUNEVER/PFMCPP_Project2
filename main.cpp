@@ -16,14 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+int
+float
+double
+char
+unsigned int
+bool
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -64,10 +62,39 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int width = 3;
+    int height = 4;
+    int depth = 3;
+    
+    float pi = 3.14f;
+    float radius = 2.0f;
+    float area = pi * radius * radius;
+
+    double pi2 = 3.141592653589793;
+    double gravitationalConstant = 6.673e-11; 
+    const double massOfEarth = 5.98e24; 
+
+    char q = 'q';
+    char w = 'w';
+    char e  = 'e';
+
+    bool tired = true;
+    bool hungry = false;
+    bool isWarm = true;
+
+    unsigned int age = 36;
+    unsigned int marbles = 5;
+    unsigned int pencils = 2;
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+
+
+
+
+
+    
+    ignoreUnused(number, width, height, depth, pi, radius, area , pi2, gravitationalConstant, massOfEarth, q, w, e, tired, hungry, isWarm, age, marbles, pencils); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,43 +111,84 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+bool isItRaining(bool raining, int temperature = 6)
+{
+    ignoreUnused(raining, temperature);
+    return {};
+}
 /*
  2)
  */
-
+char setMiddleInitial(char middleInitial)
+{
+    ignoreUnused(middleInitial);
+    return {};
+}
 /*
  3)
  */
-
+int getAge(int currentYear, int birthYear = 1987)
+{
+    ignoreUnused(currentYear, birthYear);
+    return {};
+}
 /*
  4)
  */
-
+int convertDogYears(int years)
+{
+    ignoreUnused(years);
+    return {};
+}
 /*
  5)
  */
+int getColor(int color)
+{
+    ignoreUnused(color);
+    return{};
+}
 
 /*
  6)
  */
-
+bool setAlarm(bool alarmOn, float time = 7.0f)
+{
+    ignoreUnused(alarmOn, time);
+    return{};
+}
 /*
  7)
  */
-
+int getIP(int ipv4, int ipv6)
+{
+    ignoreUnused(ipv4, ipv6);
+    return{};
+}
 /*
  8)
  */
-
+float setDepth(float depth = 0.0 , float delta = 0.0)
+{
+    ignoreUnused(depth, delta);
+    return{};
+}
 /*
  9)
  */
-
+unsigned int multiplyByTwo(unsigned int number)
+{
+    ignoreUnused(number);
+    return {};
+}
 /*
  10)
  */
-
+char setChar(char firstInitial)
+{
+    ignoreUnused(firstInitial);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +209,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto rain = isItRaining(false);
     //2)
-    
+    auto initialM = setMiddleInitial('C');
     //3)
-    
+    auto age = getAge(9, 13);
     //4)
-    
+    auto dogYears = convertDogYears(3);
     //5)
-    
+    auto color = getColor(1);
     //6)
-    
+    auto alarm = setAlarm(true);
     //7)
-    
+    auto newIP = getIP(1, 2);
     //8)
-    
+    auto depth = setDepth(0.0, 0.0);
     //9)
-    
+    auto multiple = multiplyByTwo(2);
     //10)
+    auto character = setChar('t');
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, isItRaining);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
