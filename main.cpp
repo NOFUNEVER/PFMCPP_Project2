@@ -229,7 +229,7 @@ int main()
     //10)
     auto character = setChar('t');
     
-    ignoreUnused(carRented, isItRaining);
+    ignoreUnused(carRented, rain, initialM, age, dogYears, color, alarm, newIP, depth, multiple, character);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
